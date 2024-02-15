@@ -61,10 +61,12 @@
       background-color: rgb(190, 104, 54);
       border-radius: 5px;
       background: linear-gradient(to right, #460c04, #665814);
+      border: 1px solid black;
       .personPic {
         margin: auto;
         width: 13rem;
         height: 12rem;
+        border: 1px solid black;
       }
       .personName {
         margin: auto;
