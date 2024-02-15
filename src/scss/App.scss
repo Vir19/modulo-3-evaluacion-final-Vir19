@@ -1,6 +1,6 @@
 @import 'core/reset';
 
-//
+// MOBILE 320 PX
 
 .header {
   width: 100vw;
@@ -17,6 +17,7 @@
   background-image: url('https://www.mccormick.northwestern.edu/images/news/2023/07/what-does-a-twinkling-star-sound-like-take-a-listen-social.jpg');
   background-size: cover;
   background-position: center;
+  height: 85vh;
   .form {
     display: flex;
     flex-direction: column;
@@ -24,11 +25,12 @@
     align-content: center;
     gap: 1.5rem;
     .fieldset1 {
-      display: flex;
+      display: grid;
       border: none;
       gap: 0.5rem;
       .legend1 {
        color: white;
+       font-size: 1.2rem;
       }
       .input {
         margin: auto;
@@ -40,17 +42,22 @@
       border: none;
       .legend2 {
         color: white;
+        font-size: 1.2rem;
       }
     }
   }
   .characterSection {
     margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     .characterCard {
+      margin-left: 0.5rem;
       display: flex;
       flex-direction: column;
       width: 15rem;
       height: 16rem;
-      background-color: rgb(131, 68, 31);
+      background-color: rgb(190, 104, 54);
+      border-radius: 5px;
       .personPic {
         margin: auto;
         width: 13rem;
@@ -65,5 +72,48 @@
         text-align: center;
       }
     }
+  }
+}
+
+.characterCardDetail{
+  margin-left: 7rem;
+  background-color: rgb(125, 125, 29);
+  padding: 1rem 1.3rem 0.7rem 0rem;
+  border-radius: 5px;
+  
+  .personPicDetail{
+      margin-left: 1.5rem;
+      width: 17rem;
+      height: 20rem;
+      border: 1px solid black;
+  }
+  .personNameDetail{
+      color: rgb(62, 15, 15);
+      text-align: center;
+      padding-bottom: 0.7rem;
+      text-decoration: underline;
+  }
+  .flexy {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 5rem;
+    line-height: 1.5rem;
+    .title3{
+      color: rgb(62, 15, 15);
+    }
+    .wordies {
+      color: black;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.footer{
+  height: 7rem;
+  background: linear-gradient(to bottom, #0a0a4a, #6090cb);
+  .copy {
+    color: white;
+    margin: 1rem 0rem 0rem 0.5rem;
+    overflow: hidden;
   }
 }
