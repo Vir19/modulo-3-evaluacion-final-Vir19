@@ -1,18 +1,21 @@
-//import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import CharacterCard from "./CharacterCard";
-import CharacterDetail from "./CharacterDetail";
+//import CharacterDetail from "./CharacterDetail";
 
-function CharacterSection() {
+function CharacterSection({ characters }) {
   return (
     <section className="characterSection">
-      {/* <CharacterCard /> */}
-      <CharacterDetail />
+      {characters.map((character) => (
+        <CharacterCard key={character.id} character={character} />
+      ))}
+      {/* <CharacterDetail /> */}
     </section>
   );
 }
 
-/* CharacterSection.propTypes = {
-}; */
+CharacterSection.propTypes = {
+  characters: PropTypes.array,
+};
 
 export default CharacterSection;

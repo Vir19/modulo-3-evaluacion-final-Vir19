@@ -1,19 +1,17 @@
-//import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
-function CharacterCard() {
+function CharacterCard({ character }) {
   return (
-    <div className="characterCard">
-      <img
-        className="personPic"
-        src="https://media.revistavanityfair.es/photos/60e84a97a5768ac18af685dd/master/w_1600,c_limit/39710.jpg"
-        alt="harry potter"
-      />
-      <h3 className="personName">Harry Potter</h3>
-      <p className="personRace">human</p>
+    <div className="characterCard" key={character.id}>
+      <img className="personPic" src={character.image} alt={character.name} />
+      <h3 className="personName">{character.name}</h3>
+      <p className="personRace">{character.species}</p>
     </div>
   );
 }
 
-CharacterCard.propTypes = {};
+CharacterCard.propTypes = {
+  character: PropTypes.object,
+};
 
 export default CharacterCard;
