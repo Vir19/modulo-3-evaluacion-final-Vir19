@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CharacterDetail({ findCharacter }) {
   const params = useParams();
@@ -8,15 +9,13 @@ function CharacterDetail({ findCharacter }) {
   return (
     <section className="characterDetail">
       <div className="characterCardDetail">
-        <img
-          className="personPicDetail"
-          src="https://media.revistavanityfair.es/photos/60e84a97a5768ac18af685dd/master/w_1600,c_limit/39710.jpg"
-          alt="harry potter"
-        />
+        <img className="personPicDetail" src={character.image} />
         <h2 className="personNameDetail">{character.name}</h2>
         <div className="flexy">
           <h3 className="title3">Estatus:</h3>
-          <span className="wordies">{character.alive}</span>
+          <span className="wordies">
+            {character.alive ? "Alive" : "Deceased"}
+          </span>
         </div>
         <div className="flexy">
           <h3 className="title3">Especie:</h3>
@@ -31,7 +30,9 @@ function CharacterDetail({ findCharacter }) {
           <span className="wordies last">{character.house}</span>
         </div>
       </div>
-      <button>Volver</button>
+      <Link to="/" className="detail-btn">
+        Volver
+      </Link>
     </section>
   );
 }

@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
-//import CharacterDetail from "./CharacterDetail";
 
 function CharacterSection({ characters }) {
   return (

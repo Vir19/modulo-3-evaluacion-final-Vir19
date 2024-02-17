@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
 import "../scss/App.scss";
-import CharacterSection from "./CharacterSection";
-import Filters from "./Filters";
-import Footer from "./Footer";
-import Header from "./Header";
+import { useEffect, useState } from "react";
 import { fetchCharacters } from "../services/fetch";
 import { Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import Filters from "./Filters";
+import CharacterSection from "./CharacterSection";
 import CharacterDetail from "./CharacterDetail";
+import Footer from "./Footer";
 
 function App() {
   // Variables de estado
@@ -15,8 +15,7 @@ function App() {
 
   useEffect(() => {
     fetchCharacters().then((data) => {
-      const limitedCharacters = data.slice(0, 20);
-      setCharacters(limitedCharacters);
+      setCharacters(data);
     });
   }, []);
 
