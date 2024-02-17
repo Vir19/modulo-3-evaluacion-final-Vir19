@@ -10,24 +10,24 @@ function CharacterDetail({ findCharacter }) {
     <section className="characterDetail">
       <div className="characterCardDetail">
         <img className="personPicDetail" src={character.image} />
-        <h2 className="personNameDetail">{character.name}</h2>
+        <h2 className="personNameDetail"> {character.name}</h2>
         <div className="flexy">
-          <h3 className="title3">Estatus:</h3>
+          <h3 className="title3">Estatus: </h3>
           <span className="wordies">
             {character.alive ? "Alive" : "Deceased"}
           </span>
         </div>
         <div className="flexy">
-          <h3 className="title3">Especie:</h3>
-          <span className="wordies">{character.species}</span>
+          <h3 className="title3">Especie: </h3>
+          <span className="wordies"> {character.species}</span>
         </div>
         <div className="flexy">
-          <h3 className="title3">Género:</h3>
-          <span className="wordies">{character.gender}</span>
+          <h3 className="title3">Género: </h3>
+          <span className="wordies"> {character.gender}</span>
         </div>
         <div className="flexy">
-          <h3 className="title3">Casa:</h3>
-          <span className="wordies last">{character.house}</span>
+          <h3 className="title3">Casa: </h3>
+          <span className="wordies last"> {character.house}</span>
         </div>
       </div>
       <Link to="/" className="detail-btn">

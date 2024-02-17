@@ -5,7 +5,8 @@
 .header {
   width: 100vw;
   height: 12rem;
-  background: linear-gradient(to top, #0a0a4a, #6090cb);
+  background-image: url('https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2022/08/30/313B4590-F024-4665-8400-B6EB31FDEE85/hogwarts_98.jpg?crop=1000,563,x0,y4&width=1900&height=1069&optimize=high&format=webply');
+  background-size: cover;
   .logo {
     width: 32rem;
     height: 13rem;
@@ -13,21 +14,28 @@
 }
 
 .main {
-  padding-top: 1rem;
   background-image: url('https://www.mccormick.northwestern.edu/images/news/2023/07/what-does-a-twinkling-star-sound-like-take-a-listen-social.jpg');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   height: 100%;
   .form {
+    padding-top: 0.5rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     gap: 1.5rem;
+   // background: radial-gradient(to top, #0a0a4a, #6090cb);
+    background: radial-gradient(circle at center, #6090cb, #050524);
+    width: 25rem;
+    height: 10rem;
+    margin-left: 4rem;
+    border-radius: 10px;
     .fieldset1 {
       display: grid;
       border: none;
       gap: 0.5rem;
+      
       .legend1 {
        color: white;
        font-size: 1.2rem;
@@ -94,25 +102,26 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-
     .characterCardDetail {
-      background-color: rgb(125, 125, 29);
+      border: 2px solid white;
       padding: 1rem 1.3rem 0.7rem 0rem;
       border-radius: 5px;
-  
+      background-image: url('https://img.pikbest.com/origin/09/17/92/88FpIkbEsTNRU.jpg!bw700');
       .personPicDetail {
         margin-left: 1.5rem;
         width: 17rem;
         height: 20rem;
-        border: 1px solid black;
+        border: 1px solid white;
       }
   
       .personNameDetail {
-        color: rgb(62, 15, 15);
+        color: white;
         text-align: center;
         padding-bottom: 0.7rem;
         text-decoration: underline;
         text-transform: capitalize;
+        width: 14rem;
+        margin-left: 3rem;
       }
   
       .flexy {
@@ -122,11 +131,11 @@
         line-height: 1.5rem;
   
         .title3 {
-          color: rgb(62, 15, 15);
+          color:white;
         }
   
         .wordies {
-          color: black;
+          color: white;
           font-size: 1.1rem;
           text-transform: capitalize;
         }
@@ -136,7 +145,7 @@
       height: 2.5rem;
       width: 12rem;
       border: 1px solid white;
-      background-color: rgba(181, 190, 9, 0.364);
+      background-color: rgba(223, 187, 46, 0.656);
       border-radius: 5px;
       color: white;
       text-decoration: none;
