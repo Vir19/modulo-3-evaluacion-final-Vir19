@@ -15,6 +15,8 @@ function App() {
   const [filterHouse, setFilterHouse] = useState("all");
   const [filterCharacter, setFilterCharacter] = useState("");
 
+  // Use effect
+
   useEffect(() => {
     fetchCharacters().then((data) => {
       setCharacters(data);
@@ -31,11 +33,12 @@ function App() {
     console.log("filterValue", filterValue);
     setFilterCharacter(filterValue);
   };
-  // Variables HTML
 
   const findCharacter = (id) => {
     return characters.find((character) => character.id === id);
   };
+
+  // Variables HTML
 
   const filteredHouse =
     filterHouse === "all"
@@ -69,10 +72,7 @@ function App() {
                   filterCharacter={filterCharacter}
                   handleFilterCharacter={handleFilterCharacter}
                 />
-                <CharacterSection
-                  characters={filteredSection}
-                  // filteredCharacter={filteredCharacter}
-                />
+                <CharacterSection characters={filteredSection} />
               </>
             }
           />

@@ -12,7 +12,6 @@ function Filters({
   };
   // FILTRO NOMBRE PERSONAJE
   const handleChangeCharacter = (event) => {
-    console.log("handleChangeCharacter called");
     handleFilterCharacter(event.currentTarget.value);
   };
   return (
