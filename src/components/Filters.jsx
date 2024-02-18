@@ -1,14 +1,22 @@
 import PropTypes from "prop-types";
 
-function Filters({ filterHouse, handleFilterHouse }) {
+function Filters({
+  filterHouse,
+  handleFilterHouse,
+  handleFilterCharacter,
+  filterCharacter,
+}) {
+  // FILTRO CASAS
   const handleChange = (event) => {
-    const selectedHouse = event.currentTarget.value;
     handleFilterHouse(event.currentTarget.value);
-    console.log(selectedHouse);
   };
-
+  // FILTRO NOMBRE PERSONAJE
+  const handleChangeCharacter = (event) => {
+    console.log("handleChangeCharacter called");
+    handleFilterCharacter(event.currentTarget.value);
+  };
   return (
-    <form className="form">
+    <form className="form" onSubmit={(e) => e.preventDefault()}>
       <fieldset className="fieldset1">
         <legend className="legend1">Busca por personaje:</legend>
         <input
@@ -16,6 +24,8 @@ function Filters({ filterHouse, handleFilterHouse }) {
           type="text"
           name="filterCharacter"
           id="filterCharacter"
+          onChange={handleChangeCharacter}
+          value={filterCharacter}
         />
       </fieldset>
       <fieldset className="fieldset2">
@@ -27,7 +37,7 @@ function Filters({ filterHouse, handleFilterHouse }) {
           onChange={handleChange}
           value={filterHouse}
         >
-          <option value="all">Todos</option>
+          <option value="all">Todas</option>
           <option value="gryffindor">Gryffindor</option>
           <option value="slytherin">Slytherin</option>
           <option value="hufflepuff">Hufflepuff</option>
@@ -40,7 +50,9 @@ function Filters({ filterHouse, handleFilterHouse }) {
 
 Filters.propTypes = {
   filterHouse: PropTypes.string,
+  filterCharacter: PropTypes.string,
   handleFilterHouse: PropTypes.func,
+  handleFilterCharacter: PropTypes.func,
 };
 
 export default Filters;

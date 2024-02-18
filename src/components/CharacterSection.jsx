@@ -12,8 +12,7 @@ function CharacterSection({ characters }) {
 }
 
 CharacterSection.propTypes = {
-  characters: PropTypes.array.isRequired,
-  filteredHouse: PropTypes.array,
+  characters: PropTypes.array,
 };
 
 export default CharacterSection;

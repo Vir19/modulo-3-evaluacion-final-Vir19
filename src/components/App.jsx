@@ -10,8 +10,10 @@ import Footer from "./Footer";
 
 function App() {
   // Variables de estado
+
   const [characters, setCharacters] = useState([]);
   const [filterHouse, setFilterHouse] = useState("all");
+  const [filterCharacter, setFilterCharacter] = useState("");
 
   useEffect(() => {
     fetchCharacters().then((data) => {
@@ -23,9 +25,12 @@ function App() {
 
   const handleFilterHouse = (house) => {
     setFilterHouse(house);
-    console.log("house:"(house));
   };
 
+  const handleFilterCharacter = (filterValue) => {
+    console.log("filterValue", filterValue);
+    setFilterCharacter(filterValue);
+  };
   // Variables HTML
 
   const findCharacter = (id) => {
@@ -40,6 +45,15 @@ function App() {
             character.house.toLowerCase() === filterHouse.toLowerCase()
         );
 
+  const filteredCharacter = characters.filter((character) =>
+    character.name.toLowerCase().includes(filterCharacter.toLowerCase())
+  );
+
+  const filteredSection =
+    filterHouse === "all" ? filteredCharacter : filteredHouse;
+
+  console.log("filteredCharacter:", filteredCharacter);
+
   return (
     <div>
       <Header />
@@ -52,8 +66,13 @@ function App() {
                 <Filters
                   filterHouse={filterHouse}
                   handleFilterHouse={handleFilterHouse}
+                  filterCharacter={filterCharacter}
+                  handleFilterCharacter={handleFilterCharacter}
                 />
-                <CharacterSection characters={filteredHouse} />
+                <CharacterSection
+                  characters={filteredSection}
+                  // filteredCharacter={filteredCharacter}
+                />
               </>
             }
           />
