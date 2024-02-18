@@ -52,8 +52,6 @@ function App() {
   const filteredSection =
     filterHouse === "all" ? filteredCharacter : filteredHouse;
 
-  console.log("filteredCharacter:", filteredCharacter);
-
   return (
     <div>
       <Header />
