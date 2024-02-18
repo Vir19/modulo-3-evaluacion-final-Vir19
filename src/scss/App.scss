@@ -176,3 +176,34 @@
    text-decoration: none;
   }
 
+  .divsy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    .error {
+      padding-top: 2.5rem;
+      background-color: #a33729b4;
+      width: 26rem;
+      height: 10rem;
+      color: rgb(224, 210, 105);
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 3rem 0rem 0rem 3rem;
+      border: solid 1px rgb(177, 163, 50);
+    }
+    .error_btn {
+      padding-top: 0.7rem;
+      text-decoration: none;
+      color: #6090cb;
+      font-size: 1.2rem;
+      background-color: #0a0a4a;
+      text-align: center;
+      height: 3rem;
+      width: 15rem;
+      border: 1px solid white;
+      margin: 0rem 0rem 5rem 2rem;
+    }
+  }
+
+

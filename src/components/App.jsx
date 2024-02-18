@@ -14,7 +14,8 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [filterHouse, setFilterHouse] = useState("all");
   const [filterCharacter, setFilterCharacter] = useState("");
-
+  const [characterNotFound, setCharacterNotFound] = useState(false);
+  console.log("characterNotFound:", characterNotFound);
   // Use effect
 
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
   const handleFilterCharacter = (filterValue) => {
     console.log("filterValue", filterValue);
     setFilterCharacter(filterValue);
+    setCharacterNotFound(false);
   };
 
   const findCharacter = (id) => {
@@ -69,8 +71,13 @@ function App() {
                   handleFilterHouse={handleFilterHouse}
                   filterCharacter={filterCharacter}
                   handleFilterCharacter={handleFilterCharacter}
+                  cnf={characterNotFound}
+                  notFound={setCharacterNotFound}
                 />
-                <CharacterSection characters={filteredSection} />
+                <CharacterSection
+                  characters={filteredSection}
+                  cnf={characterNotFound}
+                />
               </>
             }
           />

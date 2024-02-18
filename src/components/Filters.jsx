@@ -5,15 +5,24 @@ function Filters({
   handleFilterHouse,
   handleFilterCharacter,
   filterCharacter,
+  notFound,
+  cnf,
 }) {
   // FILTRO CASAS
+
   const handleChange = (event) => {
     handleFilterHouse(event.currentTarget.value);
   };
+
   // FILTRO NOMBRE PERSONAJE
+
   const handleChangeCharacter = (event) => {
-    handleFilterCharacter(event.currentTarget.value);
+    const newValue = event.currentTarget.value;
+    handleFilterCharacter(newValue);
+    notFound(newValue !== filterCharacter);
+    console.log("characterNotFound:", newValue !== filterCharacter);
   };
+
   return (
     <form className="form" onSubmit={(e) => e.preventDefault()}>
       <fieldset className="fieldset1">
@@ -52,6 +61,8 @@ Filters.propTypes = {
   filterCharacter: PropTypes.string,
   handleFilterHouse: PropTypes.func,
   handleFilterCharacter: PropTypes.func,
+  notFound: PropTypes.func,
+  cnf: PropTypes.boolean,
 };
 
 export default Filters;
