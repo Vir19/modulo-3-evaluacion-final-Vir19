@@ -15,7 +15,6 @@ function App() {
   const [filterHouse, setFilterHouse] = useState("all");
   const [filterCharacter, setFilterCharacter] = useState("");
   const [characterNotFound, setCharacterNotFound] = useState(false);
-  console.log("characterNotFound:", characterNotFound);
   // Use effect
 
   useEffect(() => {
@@ -31,9 +30,8 @@ function App() {
   };
 
   const handleFilterCharacter = (filterValue) => {
-    console.log("filterValue", filterValue);
     setFilterCharacter(filterValue);
-    setCharacterNotFound(false);
+    setCharacterNotFound(filteredCharacter.length === 0);
   };
 
   const findCharacter = (id) => {
@@ -50,7 +48,7 @@ function App() {
             character.house.toLowerCase() === filterHouse.toLowerCase()
         );
 
-  const filteredCharacter = characters.filter((character) =>
+  let filteredCharacter = characters.filter((character) =>
     character.name.toLowerCase().includes(filterCharacter.toLowerCase())
   );
 

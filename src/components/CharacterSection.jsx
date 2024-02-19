@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
-import { Link } from "react-router-dom";
 
 function CharacterSection({ characters, cnf }) {
   return (
@@ -8,9 +7,6 @@ function CharacterSection({ characters, cnf }) {
       {cnf ? (
         <div className="divsy">
           <p className="error">No se ha encontrado al personaje</p>
-          <Link className="error_btn" to="/">
-            Página principal
-          </Link>
         </div>
       ) : (
         characters.map((character) => (
@@ -23,7 +19,7 @@ function CharacterSection({ characters, cnf }) {
 
 CharacterSection.propTypes = {
   characters: PropTypes.array,
-  cnf: PropTypes.boolean,
+  cnf: PropTypes.bool,
 };
 
 export default CharacterSection;

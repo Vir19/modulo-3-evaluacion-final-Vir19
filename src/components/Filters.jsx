@@ -5,8 +5,6 @@ function Filters({
   handleFilterHouse,
   handleFilterCharacter,
   filterCharacter,
-  notFound,
-  cnf,
 }) {
   // FILTRO CASAS
 
@@ -19,8 +17,6 @@ function Filters({
   const handleChangeCharacter = (event) => {
     const newValue = event.currentTarget.value;
     handleFilterCharacter(newValue);
-    notFound(newValue !== filterCharacter);
-    console.log("characterNotFound:", newValue !== filterCharacter);
   };
 
   return (
@@ -61,8 +57,6 @@ Filters.propTypes = {
   filterCharacter: PropTypes.string,
   handleFilterHouse: PropTypes.func,
   handleFilterCharacter: PropTypes.func,
-  notFound: PropTypes.func,
-  cnf: PropTypes.boolean,
 };
 
 export default Filters;
