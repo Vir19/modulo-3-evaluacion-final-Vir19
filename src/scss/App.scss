@@ -63,12 +63,15 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0.5rem; 
+    padding-bottom: 17rem;
+    justify-items: center;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
     .characterCard {
       padding-top: 0.5rem;
-      margin-left: 0.5rem;
       display: flex;
       flex-direction: column;
-      width: 15rem;
+      width: 15.5rem;
       height: 16rem;
       border-radius: 5px;
       background: linear-gradient(to right, #460c04, #665814);
@@ -159,19 +162,6 @@
     }
   }
 }
-
-
-.footer{
-  height: 7rem;
-  background: linear-gradient(to bottom, #0a0a4a, #6090cb);
-  position: sticky;
-  bottom: 0;
-  .copy {
-    color: white;
-    margin: 1rem 0rem 0rem 0.5rem;
-    overflow: hidden;
-  }
-}
  .link{
    text-decoration: none;
   }
@@ -206,4 +196,17 @@
     }
   }
 
+  .footer{
+    height: 7rem;
+    background: linear-gradient(to bottom, #0a0a4a, #6090cb);
+    position: sticky;
+    bottom: 0;
+    padding-top: 5rem;
+    .copy {
+      
+      color: white;
+      margin: 1rem 0rem 0rem 0.5rem;
+      overflow: hidden;
+    }
+  }
 
