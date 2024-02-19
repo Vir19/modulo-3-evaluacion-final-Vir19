@@ -63,10 +63,8 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0.5rem; 
-    padding-bottom: 17rem;
     justify-items: center;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+    padding: 0rem 0.25rem 17rem 0.25rem;
     .characterCard {
       padding-top: 0.5rem;
       display: flex;
@@ -209,4 +207,183 @@
       overflow: hidden;
     }
   }
+
+// Mobile 375px
+
+@media (min-width: 375px) {
+  .header {
+    .logo {
+      width: 32rem;
+      height: 13rem;
+      margin-left: 3rem;
+    }
+  }
+  .main { 
+    .form{
+      margin-left: 6rem;
+    }
+    .characterSection{
+      display: grid;
+      gap: 1rem;
+      padding: 0rem 1.5rem 0rem 1.5rem;
+    }
+   }
+  }
+
+// MOBILE 425px
+
+@media (min-width: 425px) {
+  .header {
+    .logo{
+      margin-left: 5.5rem;
+    }
+  }
+  .main {
+    .form {
+      padding-top: 1rem;
+      gap: 1rem;
+      margin-left: 7rem;
+      width: 28rem;
+    }
+    .characterSection {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      .characterCard {
+        width: 17rem;
+        height: 19rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    background-size: contain;
+    .logo {
+      margin-left: 13.5rem;
+    }
+  }
+  .main {
+    .form {
+      margin-left: 15rem;
+    }
+    .characterSection {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      .characterCard {
+        .personRace {
+          padding-bottom: 0.7rem;
+        }
+      }
+    }
+  }
+
+  .main {
+    .characterDetail {
+      .characterCardDetail {
+        width: 25rem;
+        height: 38rem;
+        margin-bottom: 5rem;
+        .personPicDetail{
+          width: 20rem;
+          height: 25rem;
+          margin-left: 2.3rem;
+        }
+        .personNameDetail {
+          margin-left: 5.4rem;
+        }
+        .flexy {
+          gap: 1rem;
+          padding-bottom: 0.5rem;
+          margin-left: 8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    .logo {
+      margin-left: 22rem;
+    }
+  }
+  .main {
+    .form {
+      width: 35rem;
+      margin-left: 22rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    .logo {
+      margin-left: 35rem;
+    }
+  }
+  .main {
+    .form {
+      width: 40rem;
+      margin-left: 30rem;
+    }
+    .characterSection {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+  .main {
+    .characterDetail {
+      .characterCardDetail {
+        padding-top: 2rem;
+        width: 30rem;
+        height: 43rem;
+        .personPicDetail{
+          width: 25rem;
+          height: 20rem;
+          margin-left: 2.3rem;
+          margin-bottom: 2rem;
+        }
+        .personNameDetail {
+          margin-left: 8rem;
+          padding-bottom: 2rem;
+          font-size: 2rem;
+
+        }
+        .flexy {
+          gap: 2rem;
+          padding-bottom: 1rem;
+          margin-left: 9rem;
+          .title3 {
+            font-size: 1.5rem;
+          }
+          .wordies {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// LAPTOP 1440px 
+
+@media (min-width: 1440px) {
+  .header {
+    .logo {
+      margin-left: 60rem;
+    }
+  }
+  .main {
+    .form {
+      margin-left: 55rem;
+      width: 45rem;
+    }
+    .characterSection {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+}
 

@@ -12,21 +12,21 @@ function CharacterDetail({ findCharacter }) {
         <img className="personPicDetail" src={character.image} />
         <h2 className="personNameDetail"> {character.name}</h2>
         <div className="flexy">
-          <h3 className="title3">Estatus: </h3>
+          <h3 className="title3">Status: </h3>
           <span className="wordies">
             {character.alive ? "Alive" : "Deceased"}
           </span>
         </div>
         <div className="flexy">
-          <h3 className="title3">Especie: </h3>
+          <h3 className="title3">Species: </h3>
           <span className="wordies"> {character.species}</span>
         </div>
         <div className="flexy">
-          <h3 className="title3">Género: </h3>
+          <h3 className="title3">Gender: </h3>
           <span className="wordies"> {character.gender}</span>
         </div>
         <div className="flexy">
-          <h3 className="title3">Casa: </h3>
+          <h3 className="title3">House: </h3>
           <span className="wordies last"> {character.house}</span>
         </div>
       </div>
